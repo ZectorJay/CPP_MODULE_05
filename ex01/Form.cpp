@@ -6,7 +6,7 @@
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 17:39:37 by hmickey           #+#    #+#             */
-/*   Updated: 2021/07/05 20:08:12 by hmickey          ###   ########.fr       */
+/*   Updated: 2021/07/06 09:29:02 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Form::Form( std::string name, short int gradeToSign, short int gradeToExec ) :
 _name(name), _sign(0), _gradeToSign(gradeToSign), _gradeToExec(gradeToExec){
 	if (_gradeToExec > 150 || _gradeToSign > 150)
 		throw GradeTooLowException();
-	if (_gradeToExec < 0 || _gradeToSign < 0)
+	if (_gradeToExec <= 0 || _gradeToSign <= 0)
 		throw GradeTooHighException();
 }
 
@@ -55,4 +55,21 @@ std::ostream &		operator<<( std::ostream & o, Form const & src ){
 	o << ". Its require " << src.getGradeToSign() << "th grade to sign and ";
 	o << src.getGradeToExec() << " grade to execute" << std::endl;
 	return (o);
+}
+
+/*
+**      @brief  Function that set sign status of form
+**
+**      @param  signer			take bureaucrat which will try to sign form
+**      @return int             return 1 - success, 0 - form already signed, (-1) - bureaucrat grade is too low
+*/
+
+int					Form::beSigned( Bureaucrat const & signer ) {
+	if ( signer.getGrade() <= _gradeToSign && _sign == 0){
+		_sign = 1;
+		return (1);
+	}
+	else if (_sign == 1)
+		return (0);
+	return (-1);
 }

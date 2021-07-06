@@ -6,7 +6,7 @@
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 17:31:17 by hmickey           #+#    #+#             */
-/*   Updated: 2021/07/05 19:23:02 by hmickey          ###   ########.fr       */
+/*   Updated: 2021/07/06 09:06:33 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ public:
 	bool				getSignStatus() const;
 	short int const		getGradeToSign() const;
 	short int const		getGradeToExec() const;
+	int					beSigned( Bureaucrat const & signer );
 
 	class	GradeTooHighException : public std::exception {
 
