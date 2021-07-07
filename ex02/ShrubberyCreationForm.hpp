@@ -6,7 +6,7 @@
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/07 12:09:22 by hmickey           #+#    #+#             */
-/*   Updated: 2021/07/07 17:06:08 by hmickey          ###   ########.fr       */
+/*   Updated: 2021/07/07 17:15:34 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,8 @@ public:
 
 private:
 
-	ShrubberyCreationForm();
-
 	int					executeAction() const;
 
-	std::string					_target;
 	static std::string const	_tree;
 
 };

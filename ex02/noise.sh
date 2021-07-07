@@ -1,5 +1,5 @@
-say -v Fred "Robhotization HAS BEEN STARTED."
+say -v Alex "Robotization HAS BEEN STARTED."
 sleep 1
-say -v Fred "Beep-beep-beep."
+say -v Samantha "Beep-beep-beeps."
 sleep 1
-say -v Fred "Rhobhotization complete"
+say -v Victoria "Robotithation complete"

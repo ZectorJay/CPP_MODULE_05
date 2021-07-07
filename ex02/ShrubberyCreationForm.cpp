@@ -6,7 +6,7 @@
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/07 12:53:34 by hmickey           #+#    #+#             */
-/*   Updated: 2021/07/07 17:10:20 by hmickey          ###   ########.fr       */
+/*   Updated: 2021/07/07 17:15:00 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ std::string const ShrubberyCreationForm::_tree = ""
             "      |.|        |.|         |'|\n"
             "      |.|        |.|         |'|\n";
 
-ShrubberyCreationForm::ShrubberyCreationForm() : Form( "wtf" ,"ShrubberyCreationForm", 145, 137) {}
 
 ShrubberyCreationForm::ShrubberyCreationForm( std::string target ) :
 Form( target ,"ShrubberyCreationForm", 145, 137) {}
