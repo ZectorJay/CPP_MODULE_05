@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
+/*   PresidentalPardonForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/07 19:19:28 by hmickey           #+#    #+#             */
-/*   Updated: 2021/07/07 19:58:51 by hmickey          ###   ########.fr       */
+/*   Created: 2021/07/07 19:32:41 by hmickey           #+#    #+#             */
+/*   Updated: 2021/07/07 19:59:04 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRESIDENTIALPARDONFORM_HPP
-# define PRESIDENTIALPARDONFORM_HPP
-# include "Form.hpp"
+#include "PresidentialPardonForm.hpp"
 
-class Form;
+PresidentialPardonForm::PresidentialPardonForm( std::string target ) :
+Form( target, "PresidentalPardonForm", 25, 5) {}
 
-class PresidentialPardonForm : public Form {
-
-public:
-
-	PresidentialPardonForm( std::string target );
-	virtual ~PresidentialPardonForm(){}
-
-private:
-
-	int		executeAction() const;
-
-};
-
-#endif
+int			PresidentialPardonForm::executeAction() const {
+	std::cout<<YELLOW<<this->getTarget();
+	std::cout<<" has been pardoned by Zafod Beeblebrox";
+	std::cout<<RESET<<std::endl;
+	return (1);
+}
